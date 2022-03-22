@@ -32,36 +32,23 @@
             android:id="@+id/action_fragmentKetiga_to_fragmentKeempat"
             app:destination="@id/fragmentKeempat" />
         <argument
+            android:name="currentBiodata"
+            app:argType="com.than.challengeschapter3.Biodata"/>
+        <argument
             android:name="nama"
-            app:argType="string"
-            android:defaultValue="Nama Anda"
-            app:nullable="true" />
-        <argument
-            android:name="usia"
-            app:argType="integer"
-            android:defaultValue="0" />
-        <argument
-            android:name="alamat"
-            app:argType="string"
-            android:defaultValue="Alamat Anda"
-            app:nullable="true" />
-        <argument
-            android:name="pekerjaan"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue="Pekerjaan Anda" />
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/fragmentKeempat"
         android:name="com.than.challengeschapter3.FragmentKeempat"
         android:label="fragment_keempat"
         tools:layout="@layout/fragment_keempat" >
-        <action
-            android:id="@+id/action_fragmentKeempat_to_fragmentKetiga"
-            app:destination="@id/fragmentKetiga" />
         <argument
             android:name="nama"
             app:argType="string"
             android:defaultValue="Nama Anda" />
+        <action
+            android:id="@+id/action_fragmentKeempat_to_fragmentKetiga"
+            app:destination="@id/fragmentKetiga" />
     </fragment>
 </navigation>

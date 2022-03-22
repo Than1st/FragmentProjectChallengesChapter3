@@ -1,6 +1,7 @@
 package com.than.challengeschapter3
 
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,12 +41,13 @@ class FragmentKeempat : Fragment() {
                     Toast.makeText(requireContext(), "Pekerjaan tidak boleh kosong!", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    val biodata = FragmentKeempatDirections.actionFragmentKeempatToFragmentKetiga()
-                    biodata.nama = args.nama
-                    biodata.usia = binding.etUsia.text.toString().toInt()
-                    biodata.alamat = binding.etAlamat.text.toString()
-                    biodata.pekerjaan = binding.etPekerjaan.text.toString()
-                    it.findNavController().navigate(biodata)
+                    var usia = binding.etUsia.text.toString().toInt()
+                    var alamat = binding.etAlamat.text.toString()
+                    var pekerjaan = binding.etPekerjaan.text.toString()
+                    val biodata = Biodata(args.nama, usia, alamat, pekerjaan)
+                    val kirim = FragmentKeempatDirections.actionFragmentKeempatToFragmentKetiga(biodata, args.nama)
+                    it.findNavController().navigate(kirim)
+
                 }
             }
         }

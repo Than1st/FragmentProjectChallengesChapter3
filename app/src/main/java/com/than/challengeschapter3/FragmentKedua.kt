@@ -12,6 +12,9 @@ import com.than.challengeschapter3.databinding.FragmentKeduaBinding
 class FragmentKedua : Fragment() {
     private var _binding : FragmentKeduaBinding? = null
     private val binding get() = _binding!!
+    companion object{
+        const val EXTRA_NAMA = "extra_nama"
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,9 +28,12 @@ class FragmentKedua : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnToThree.setOnClickListener {
             if (binding.etNama.text.isNotEmpty()){
-                val biodata = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga()
-                biodata.nama = binding.etNama.text.toString()
-                it.findNavController().navigate(biodata)
+//                val bundle = Bundle()
+//                bundle.putString(EXTRA_NAMA, binding.etNama.text.toString())
+                var biodata = Biodata("", 0,"","")
+                var nama = binding.etNama.text.toString()
+                var kirim = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(biodata, nama)
+                it.findNavController().navigate(kirim)
             } else {
                 Toast.makeText(requireContext(), "Nama Tidak boleh Kosong!", Toast.LENGTH_SHORT).show()
             }

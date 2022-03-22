@@ -1,10 +1,11 @@
 package com.than.challengeschapter3
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.than.challengeschapter3.databinding.FragmentKetigaBinding
@@ -12,7 +13,7 @@ import com.than.challengeschapter3.databinding.FragmentKetigaBinding
 class FragmentKetiga : Fragment() {
     private var _binding : FragmentKetigaBinding? = null
     private val binding get() = _binding!!
-    private val args:FragmentKetigaArgs by navArgs()
+    private val args: FragmentKetigaArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,18 +25,17 @@ class FragmentKetiga : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var biodata = args.nama
-        if (args.usia > 0){
-            val bernilai = if (args.usia%2==0) "Genap" else "Ganjil"
-            val usia = "\nUsia ${args.usia}, $bernilai"
-            val alamat = "\n${args.alamat}"
-            val pekerjaan = "\n${args.pekerjaan}"
-            biodata += usia + alamat + pekerjaan
+        var nama = args.nama
+        val parcelBiodata = args.currentBiodata
+        var biodata = nama
+        if (parcelBiodata.usia > 0){
+            var oddOrEven = if(parcelBiodata.usia%2==0) "Genap" else "Ganjil"
+            biodata += "\n${parcelBiodata.usia}, $oddOrEven\n${parcelBiodata.alamat}\n${parcelBiodata.pekerjaan}"
         }
         binding.tvBiodata.text = biodata
         binding.btnToFour.setOnClickListener {
             val kirimNama = FragmentKetigaDirections.actionFragmentKetigaToFragmentKeempat()
-            kirimNama.nama = args.nama.toString()
+            kirimNama.nama = nama
             it.findNavController().navigate(kirimNama)
         }
     }
