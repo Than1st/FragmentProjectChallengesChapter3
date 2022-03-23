@@ -12,6 +12,6 @@
     <string name="harga_jual_per_piece_text">Harga Jual Per Piece</string>
     <string name="piece_per_dus_text">Piece Per Dus</string>
     <string name="masuk_text">Masuk</string>
-    <string name="login_text">Login</string>
+    <string name="login_text">Selamat Datang!\nSilahkan Login</string>
     <string name="input_data_text">Input Data</string>
 </resources>

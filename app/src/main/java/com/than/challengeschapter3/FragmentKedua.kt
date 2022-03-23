@@ -24,11 +24,11 @@ class FragmentKedua : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnToThree.setOnClickListener {
-            if (binding.etNama.text.isNotEmpty()){
+            if (binding.loginDesign.etNama.text.isNotEmpty()){
 //                val bundle = Bundle()
 //                bundle.putString(EXTRA_NAMA, binding.etNama.text.toString())
                 val untung = Keuntungan(0, 0,0)
-                val nama = binding.etNama.text.toString()
+                val nama = binding.loginDesign.etNama.text.toString()
                 val kirim = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(untung, nama)
                 it.findNavController().navigate(kirim)
             } else {
