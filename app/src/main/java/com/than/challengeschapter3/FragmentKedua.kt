@@ -23,7 +23,7 @@ class FragmentKedua : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnToThree.setOnClickListener {
+        binding.loginDesign.btnToThree.setOnClickListener {
             if (binding.loginDesign.etNama.text.isNotEmpty()){
 //                val bundle = Bundle()
 //                bundle.putString(EXTRA_NAMA, binding.etNama.text.toString())

@@ -8,10 +8,18 @@
     <string name="masukkan_usia_text">Masukkan Usia</string>
     <string name="masukkan_alamat_text">Masukkan Alamat</string>
     <string name="masukkan_pekerjaan_text">Masukkan Pekerjaan</string>
-    <string name="harga_per_dus_text">Harga Per Dus</string>
-    <string name="harga_jual_per_piece_text">Harga Jual Per Piece</string>
     <string name="piece_per_dus_text">Piece Per Dus</string>
     <string name="masuk_text">Masuk</string>
     <string name="login_text">Selamat Datang!\nSilahkan Login</string>
     <string name="input_data_text">Input Data</string>
+    <string name="mulai_hitung_text">Mulai Hitung</string>
+    <string name="klik_mulai_hitung_untuk_mulai_berhitung_text">Klik Mulai Hitung Untuk Mulai Berhitung</string>
+    <string name="harga_per_dus_text">Harga Per Dus</string>
+    <string name="rp_20_000_text">Rp.20.000</string>
+    <string name="jumlah_piece_per_dus_text">Jumlah Piece Per Dus</string>
+    <string name="_20_text">20</string>
+    <string name="harga_per_piece_text">Harga Per Piece</string>
+    <string name="harga_jual_per_piece_text">Harga Jual Per Piece</string>
+    <string name="total_habis_terjual_text">Total Habis Terjual</string>
+    <string name="total_keuntungan_text">Total Keuntungan</string>
 </resources>
