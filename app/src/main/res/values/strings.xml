@@ -8,4 +8,10 @@
     <string name="masukkan_usia_text">Masukkan Usia</string>
     <string name="masukkan_alamat_text">Masukkan Alamat</string>
     <string name="masukkan_pekerjaan_text">Masukkan Pekerjaan</string>
+    <string name="harga_per_dus_text">Harga Per Dus</string>
+    <string name="harga_jual_per_piece_text">Harga Jual Per Piece</string>
+    <string name="piece_per_dus_text">Piece Per Dus</string>
+    <string name="masuk_text">Masuk</string>
+    <string name="login_text">Login</string>
+    <string name="input_data_text">Input Data</string>
 </resources>

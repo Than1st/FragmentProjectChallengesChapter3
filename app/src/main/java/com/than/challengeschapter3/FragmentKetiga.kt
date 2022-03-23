@@ -1,7 +1,6 @@
 package com.than.challengeschapter3
 
 import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,14 +24,26 @@ class FragmentKetiga : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var nama = args.nama
-        val parcelBiodata = args.currentBiodata
-        var biodata = nama
-        if (parcelBiodata.usia > 0){
-            var oddOrEven = if(parcelBiodata.usia%2==0) "Genap" else "Ganjil"
-            biodata += "\n${parcelBiodata.usia}, $oddOrEven\n${parcelBiodata.alamat}\n${parcelBiodata.pekerjaan}"
+        val nama = args.nama
+        val parcelKeuntungan = args.currentKeuntungan
+        var keterangan = nama
+        if (parcelKeuntungan.hargaPerDus > 0){
+            binding.btnToFour.visibility = View.GONE
+            val hasilJual = parcelKeuntungan.hargaJualPerPiece * parcelKeuntungan.piecePerDus
+            val keuntungan = hasilJual - parcelKeuntungan.hargaPerDus
+            val hargaPerPiece = parcelKeuntungan.hargaPerDus / parcelKeuntungan.piecePerDus
+            val untungAtauTidak = if (keuntungan > 0) "Untung Gan!" else "Kagak Untung!"
+            keterangan = """
+                Harga Per Dus : ${parcelKeuntungan.hargaPerDus}
+                Jumlah Piece Per Dus : ${parcelKeuntungan.piecePerDus}
+                Harga Per Piece : $hargaPerPiece
+                Harga Jual Per Piece : ${parcelKeuntungan.hargaJualPerPiece}
+                Keuntungan Yang Di Dapat : $keuntungan
+                $untungAtauTidak
+            """.trimIndent()
+
         }
-        binding.tvBiodata.text = biodata
+        binding.tvBiodata.text = keterangan
         binding.btnToFour.setOnClickListener {
             val kirimNama = FragmentKetigaDirections.actionFragmentKetigaToFragmentKeempat()
             kirimNama.nama = nama

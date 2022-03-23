@@ -28,24 +28,30 @@ class FragmentKeempat : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnToThree.setOnClickListener {
             when {
-                binding.etUsia.text.isEmpty() -> {
-                    Toast.makeText(requireContext(), "Umur tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+                binding.etHargaPerDus.text.isEmpty() -> {
+                    Toast.makeText(requireContext(), "Harga Per Dus Tidak Boleh Kosong!", Toast.LENGTH_SHORT).show()
                 }
-                binding.etUsia.text.toString().toInt() <= 0 -> {
-                    Toast.makeText(requireContext(), "Umur harus lebih dari nol!", Toast.LENGTH_SHORT).show()
+                binding.etHargaPerDus.text.toString().toInt() <= 0 -> {
+                    Toast.makeText(requireContext(), "harga Per Dus harus lebih dari nol!", Toast.LENGTH_SHORT).show()
                 }
-                binding.etAlamat.text.isEmpty() -> {
-                    Toast.makeText(requireContext(), "Alamat tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+                binding.etPiecePerDus.text.toString().toInt() <= 0 -> {
+                    Toast.makeText(requireContext(), "Jumlah Piece harus lebih dari nol!", Toast.LENGTH_SHORT).show()
                 }
-                binding.etPekerjaan.text.isEmpty() -> {
-                    Toast.makeText(requireContext(), "Pekerjaan tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+                binding.etHargaJualPerPiece.text.toString().toInt() <= 0 -> {
+                    Toast.makeText(requireContext(), "Harga Jual harus lebih dari nol!", Toast.LENGTH_SHORT).show()
+                }
+                binding.etPiecePerDus.text.isEmpty() -> {
+                    Toast.makeText(requireContext(), "Jumlah Piece tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+                }
+                binding.etHargaJualPerPiece.text.isEmpty() -> {
+                    Toast.makeText(requireContext(), "Harga Jual tidak boleh kosong!", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    var usia = binding.etUsia.text.toString().toInt()
-                    var alamat = binding.etAlamat.text.toString()
-                    var pekerjaan = binding.etPekerjaan.text.toString()
-                    val biodata = Biodata(args.nama, usia, alamat, pekerjaan)
-                    val kirim = FragmentKeempatDirections.actionFragmentKeempatToFragmentKetiga(biodata, args.nama)
+                    var hargaPerDus = binding.etHargaPerDus.text.toString().toInt()
+                    var piecePerDus = binding.etPiecePerDus.text.toString().toInt()
+                    var hargaJualPerPiece = binding.etHargaJualPerPiece.text.toString().toInt()
+                    val keuntungan = Keuntungan(hargaPerDus, piecePerDus, hargaJualPerPiece)
+                    val kirim = FragmentKeempatDirections.actionFragmentKeempatToFragmentKetiga(keuntungan, args.nama)
                     it.findNavController().navigate(kirim)
 
                 }

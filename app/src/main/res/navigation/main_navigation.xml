@@ -32,8 +32,8 @@
             android:id="@+id/action_fragmentKetiga_to_fragmentKeempat"
             app:destination="@id/fragmentKeempat" />
         <argument
-            android:name="currentBiodata"
-            app:argType="com.than.challengeschapter3.Biodata"/>
+            android:name="currentKeuntungan"
+            app:argType="com.than.challengeschapter3.Keuntungan"/>
         <argument
             android:name="nama"
             app:argType="string" />
