@@ -40,6 +40,7 @@ class FragmentKetiga : Fragment() {
             binding.holder.visibility = View.VISIBLE
             binding.tvTutorial.visibility = View.GONE
             binding.btnToFour.visibility = View.GONE
+            binding.tvWelcome.visibility = View.GONE
             binding.detil.tvHargaPerDus.text = currency(parcelKeuntungan.hargaPerDus)
             binding.detil.tvJumlahPiece.text = parcelKeuntungan.piecePerDus.toString()
             binding.detil.tvJumlahPiece2.text = parcelKeuntungan.piecePerDus.toString()
