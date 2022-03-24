@@ -37,15 +37,17 @@ class FragmentKetiga : Fragment() {
             val hargaPerPiece = parcelKeuntungan.hargaPerDus / parcelKeuntungan.piecePerDus
             val keuntungan = hasilJual - parcelKeuntungan.hargaPerDus
             val totalHabisTerjual = parcelKeuntungan.hargaJualPerPiece * parcelKeuntungan.piecePerDus
-            binding.cvDetail.visibility = View.VISIBLE
+            binding.holder.visibility = View.VISIBLE
             binding.tvTutorial.visibility = View.GONE
             binding.btnToFour.visibility = View.GONE
-            binding.tvHargaPerDus.text = currency(parcelKeuntungan.hargaPerDus)
-            binding.tvJumlahPiecePerDus.text = parcelKeuntungan.piecePerDus.toString()
-            binding.tvHargaPerPiece.text = currency(hargaPerPiece)
-            binding.tvHargaJualPerPiece.text = currency(parcelKeuntungan.hargaJualPerPiece)
-            binding.tvTotalHabisTerjual.text = currency(totalHabisTerjual)
-            binding.tvTotalKeuntungan.text = currency(keuntungan)
+            binding.detil.tvHargaPerDus.text = currency(parcelKeuntungan.hargaPerDus)
+            binding.detil.tvJumlahPiece.text = parcelKeuntungan.piecePerDus.toString()
+            binding.detil.tvJumlahPiece2.text = parcelKeuntungan.piecePerDus.toString()
+            binding.detil.tvHargaPerPiece.text = currency(hargaPerPiece)
+            binding.detil.tvHargaJualPerPiece.text = currency(parcelKeuntungan.hargaJualPerPiece)
+            binding.detil.tvHasilPenjualan.text = currency(totalHabisTerjual)
+            binding.detil.tvKeuntunganAnda.text = currency(keuntungan)
+            binding.detil.tvHasilAnda.text = "Hasil Perhitungan $nama"
 
         }
         binding.btnToFour.setOnClickListener {

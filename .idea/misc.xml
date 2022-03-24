@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/drawable/custom_edit_text.xml" value="0.1295" />
+        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/drawable/login_shape.xml" value="0.127" />
         <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/fragment_kedua.xml" value="0.22" />
-        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/fragment_keempat.xml" value="0.209375" />
-        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/fragment_ketiga.xml" value="0.22" />
+        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/fragment_keempat.xml" value="0.2" />
+        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/fragment_ketiga.xml" value="0.17" />
         <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/fragment_pertama.xml" value="0.2" />
+        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/login_design.xml" value="0.25" />
+        <entry key="..\:/Users/SulthanLR/AndroidStudioProjects/ChallengesChapter3/app/src/main/res/layout/total_keuntungan.xml" value="0.25" />
       </map>
     </option>
   </component>
