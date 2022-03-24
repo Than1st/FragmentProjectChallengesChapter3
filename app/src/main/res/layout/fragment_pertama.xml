@@ -19,12 +19,13 @@
         android:src="@drawable/img_profit"
         app:layout_constraintBottom_toTopOf="@id/tv_title"
         app:layout_constraintStart_toStartOf="@id/tv_title"
-        app:layout_constraintEnd_toEndOf="@id/tv_title"/>
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        tools:ignore="ContentDescription" />
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hitung Keuntungan App"
+        android:text="@string/hitung_keuntungan_app_text"
         android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"

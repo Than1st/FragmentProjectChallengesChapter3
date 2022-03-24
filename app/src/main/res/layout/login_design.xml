@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,7 +23,8 @@
             app:layout_constraintStart_toStartOf="@id/login_design"
             app:layout_constraintEnd_toEndOf="@id/login_design"
             app:tint="@color/biru_muda"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
         <TextView
             android:id="@+id/tv_welcome"
             android:layout_width="match_parent"
@@ -39,14 +41,15 @@
             android:padding="18dp"
             android:textSize="24sp"
             android:hint="@string/masukkan_nama_text"
-            android:background="@drawable/custom_edit_text"/>
+            android:background="@drawable/custom_edit_text"
+            tools:ignore="Autofill,MissingPrefix,TextFields" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_to_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Login"
+            android:text="@string/btn_login_text"
             android:textSize="20sp"
             android:backgroundTint="@color/biru_muda"
             android:textAllCaps="false"
@@ -58,6 +61,6 @@
             app:layout_constraintTop_toBottomOf="@id/login_design"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/login_design"/>d
+            app:layout_constraintBottom_toBottomOf="@id/login_design"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

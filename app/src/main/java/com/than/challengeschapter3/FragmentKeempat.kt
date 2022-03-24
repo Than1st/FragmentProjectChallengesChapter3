@@ -1,7 +1,6 @@
 package com.than.challengeschapter3
 
 import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,9 +46,9 @@ class FragmentKeempat : Fragment() {
                     Toast.makeText(requireContext(), "Harga Jual tidak boleh kosong!", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    var hargaPerDus = binding.etHargaPerDus.text.toString().toInt()
-                    var piecePerDus = binding.etPiecePerDus.text.toString().toInt()
-                    var hargaJualPerPiece = binding.etHargaJualPerPiece.text.toString().toInt()
+                    val hargaPerDus = binding.etHargaPerDus.text.toString().toInt()
+                    val piecePerDus = binding.etPiecePerDus.text.toString().toInt()
+                    val hargaJualPerPiece = binding.etHargaJualPerPiece.text.toString().toInt()
                     val keuntungan = Keuntungan(hargaPerDus, piecePerDus, hargaJualPerPiece)
                     val kirim = FragmentKeempatDirections.actionFragmentKeempatToFragmentKetiga(keuntungan, args.nama)
                     it.findNavController().navigate(kirim)

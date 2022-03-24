@@ -25,8 +25,6 @@ class FragmentKedua : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.loginDesign.btnToThree.setOnClickListener {
             if (binding.loginDesign.etNama.text.isNotEmpty()){
-//                val bundle = Bundle()
-//                bundle.putString(EXTRA_NAMA, binding.etNama.text.toString())
                 val untung = Keuntungan(0, 0,0)
                 val nama = binding.loginDesign.etNama.text.toString()
                 val kirim = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(untung, nama)

@@ -22,4 +22,7 @@
     <string name="harga_jual_per_piece_text">Harga Jual Per Piece</string>
     <string name="total_habis_terjual_text">Total Habis Terjual</string>
     <string name="total_keuntungan_text">Total Keuntungan</string>
+    <string name="hitung_text">Hitung!</string>
+    <string name="hitung_keuntungan_app_text">Hitung Keuntungan App</string>
+    <string name="btn_login_text">Login</string>
 </resources>

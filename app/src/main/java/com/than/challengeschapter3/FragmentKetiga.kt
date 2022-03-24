@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.than.challengeschapter3.databinding.FragmentKetigaBinding
-import java.text.NumberFormat
-import java.util.*
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 
 class FragmentKetiga : Fragment() {
     private var _binding : FragmentKetigaBinding? = null
@@ -60,9 +60,15 @@ class FragmentKetiga : Fragment() {
         _binding = null
     }
 
-    private fun currency(angka: Int): String? {
-        val localeID = Locale("in", "ID")
-        val formatRupiah: NumberFormat = NumberFormat.getCurrencyInstance(localeID)
-        return formatRupiah.format(angka)
+    private fun currency(angka: Int): String {
+        val kursIndonesia = DecimalFormat.getCurrencyInstance() as DecimalFormat
+        val formatRp = DecimalFormatSymbols()
+
+        formatRp.currencySymbol = "Rp "
+        formatRp.monetaryDecimalSeparator = ','
+        formatRp.groupingSeparator = '.'
+
+        kursIndonesia.decimalFormatSymbols = formatRp
+        return kursIndonesia.format(angka).dropLast(3)
     }
 }
