@@ -49,6 +49,8 @@
             android:defaultValue="Nama Anda" />
         <action
             android:id="@+id/action_fragmentKeempat_to_fragmentKetiga"
-            app:destination="@id/fragmentKetiga" />
+            app:destination="@id/fragmentKetiga"
+            app:popUpTo="@id/fragmentKeempat"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
